@@ -227,8 +227,8 @@ fi
 #
 # Find root directory and add bin to path.
 #
-_sp_share_dir=$(cd "$(dirname $_sp_source_file)" && pwd)
-_sp_prefix=$(cd "$(dirname $(dirname $_sp_share_dir))" && pwd)
+_sp_share_dir=$(command cd "$(dirname $_sp_source_file)" && pwd)
+_sp_prefix=$(command cd "$(dirname $(dirname $_sp_share_dir))" && pwd)
 _spack_pathadd PATH       "${_sp_prefix%/}/bin"
 export SPACK_ROOT=${_sp_prefix}
 
